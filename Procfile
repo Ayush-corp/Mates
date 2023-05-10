@@ -1,1 +1,2 @@
-api: flask run -p $PORT
+app: hypercorn app --reload --debug --bind app.local.gd:$PORT --access-logfile - --error-logfile - --log-level DEBUG
+#hello: hypercorn hello --reload --debug --bind hello.local.gd:$PORT --access-logfile - --error-logfile - --log-level DEBUG
